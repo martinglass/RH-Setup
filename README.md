@@ -23,14 +23,14 @@ You will need to find out the IP of your laptimer. For this you could download a
 
 The last thing to do is to install the STM32 firmware from within the rotorhazard settings -> system page
 
-### Manual installation
+### Manual installation (change wget below if you want to use Aaronsss original repo or a different fork)
  
 if you are logged into SSH and want to run the setup manually run these commands to install RotorHazard and all of its dependencies.
 Note: options for Serial configuration are, if asked : Serial Console = No, Serial Port = yes, then confirm
 
 ```
 cd ~
-wget https://github.com/Aaronsss/RH-Setup/archive/refs/heads/main.zip
+wget https://github.com/martinglass/RH-Setup/archive/refs/heads/main.zip
 unzip main.zip
 sudo chmod 744 ~/RH-Setup-main/rh-pi-setup.sh
 ~/RH-Setup-main/rh-pi-setup.sh
