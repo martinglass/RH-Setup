@@ -1,3 +1,7 @@
+# Edit this to choose which Github repo to use (see wget below) ...
+$githubUser = "martinglass"
+#$githubUser = "Aaronsss"
+
 if grep -Fxq "2" /boot/RH/RHInstalProgress.txt
 then
     echo "$(date) RotorHazard has been installed, delete /boot/RH/RHInstalProgress.txt if you want the installer to run again"
@@ -21,7 +25,7 @@ else
       echo "Install script already downloaded"
   else
     echo "Downloading install script"
-      wget https://github.com/Aaronsss/RH-Setup/archive/refs/heads/main.zip
+      wget https://github.com/$githubUser/RH-Setup/archive/refs/heads/main.zip
       unzip -q main.zip
       chmod 744 ./RH-Setup-main/rh-pi-setup.sh
   fi
